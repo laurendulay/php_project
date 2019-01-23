@@ -1,0 +1,74 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta http-equiv="Cache-Control" content="no-store" />
+	<title>You? An Outfit Repeater? Never!</title>
+	<script src="js/jquery.min.js"></script>
+	<script src="js/ajax.js"></script>
+	<style>
+		*{
+			font-family: sans-serif;
+			box-sizing: border-box;
+		}
+
+		#profile{
+			margin: 0px auto;
+			text-align: center;
+		}
+
+		.person{
+			width:300px;
+			padding:5px 20px 20px 20px;
+			display: inline-block;
+			text-align: left;
+			vertical-align: top;
+			background-color: #000;
+			color:#fff;
+			border:1px #333 solid;
+			border-radius:5px;
+			margin:10px;
+			min-height:400px;
+		}
+
+		.person .profileImage{
+			text-align: center;
+		}
+
+		.person img{
+			width: 200px;
+			border-radius:50%;
+			border:2px #fff solid;
+		}
+
+		.person h5{
+			margin:10px 0px 0px 0px;
+		}
+
+		.person h5+p{
+			margin:0px;
+		}
+	</style>
+</head>
+<body>
+
+<h2>What Have You Worn All Year?</h2>
+<form method="post" action="assets/process.php" enctype="multipart/form-data">
+<label>Event Name
+	<input type="text" name="name" required><br>
+</label>
+<br>
+<label>Event Date
+	<input type="text" name="date" required><br>
+</label>
+<br>
+<label>Outfit Photo
+	<input type="file" name="photo" required><br>
+</label>
+	<br>
+<input type="submit" name="submit" value="Submit" id="submit">
+</form>
+
+</body>
+</html>
